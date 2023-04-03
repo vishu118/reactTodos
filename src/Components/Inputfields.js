@@ -1,6 +1,6 @@
 import React from "react";
 
-const Inputfields = ({ handleChange, handleAddTodos, input }) => {
+const Inputfields = ({ handleChange, handleAddTodos, input, setinput }) => {
   return (
     <div className="inputfield">
       <input

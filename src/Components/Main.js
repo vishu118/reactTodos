@@ -43,6 +43,8 @@ const Main = () => {
       <Inputfields
         handleChange={handleChange}
         handleAddTodos={handleAddTodos}
+        input ={input}
+        setinput = {setinput}
       />
 
       <Todos 

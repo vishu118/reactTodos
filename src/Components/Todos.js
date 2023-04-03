@@ -1,6 +1,7 @@
 import React from 'react'
 
 export default function Todos({todos,handleDelete}) {
+    
   return (
     <div className="toDo-body">
     <ul>

@@ -9,10 +9,11 @@ const Search = ({ todos, settodos }) => {
 
   const handleSearch = (e) => {
     const matchedTodo = todos.filter((ele) => {
+        setsearchTodo(e.target.value);
       return ele.title.toLowerCase().includes(e.target.value.toLowerCase());
     });
     settodos(matchedTodo);
-    setsearchTodo(e.target.value);
+    
   };
 
   return (
