@@ -19,19 +19,24 @@ code {
   box-sizing: border-box;
 }
 
+body {
+  background: #8758ff;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
 .container{
-  border: 1px solid;
-  width: 50%;
-  margin: 100px auto;
-  background-color: royalblue;
-  border-radius: 10px;
+  background: #1A1A40;
+  margin-top: 5rem;
+  padding: 2rem;
+  border-radius: 5px;
 }
 
 .container h1{
-  background-color: rgb(217, 227, 227);
-  width: 80%;
-  margin: 10px auto;
-  border-radius: 8px;
+  color: #fff;
+  margin-bottom: 0.5rem;
+  font-size: 1.75rem;
 
 }
 .inputfield{
@@ -39,21 +44,82 @@ code {
   align-items: center;
   justify-content: center;
   gap: 10px;
+  
 }
 
 .inputfield input{
-  padding: 10px 20px;
-  width: 50%;
-  border-radius: 10px;
-  border: none;
+  outline: none;
+  background: none;
+  border: 1px solid #8758ff;
+  padding: 0.5rem 1rem;
+  margin-top: 1rem;
+  margin-bottom: 2rem;
+  width: 300px;
+  color: #fff;
+  
 }
 
 .inputfield input:focus{
   outline: none;
 }
 
+
+input::placeholder {
+  color: #ffffff4d;
+}
+
 .btn{
-  padding: 10px 20px;
+  background: #8758ff;
+  color: #fff;
   border: none;
-  border-radius: 8px;
+  padding: 0.55rem;
+  cursor: pointer;
+  margin-top: -18px;
+}
+.button{
+  background-color: rgba(8, 70, 203, 0.73);
+  padding: 10px 15px;
+  width: 65px;
+  cursor: pointer;
+  margin: 2px;
+  border-radius: 5px;
+  border: none;
+  color: #a19c9c;
+  font-weight: 600;
+ 
+}
+
+.list{
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  background: #8758ff;
+  color: #fff;
+  padding: 0.75rem 1rem;
+  border-radius: 5px;
+  margin-bottom: 1rem;
+  cursor: pointer;
+}
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+.fa-trash {
+  margin-left: 0.75rem;
+}
+
+.completed {
+  color: #c5aeff;
+  text-decoration: line-through;
 }

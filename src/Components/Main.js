@@ -12,9 +12,8 @@ const Main = () => {
   };
 
   const handleAddTodos = () => {
-    if(input.trim().length>0){
-
-        settodos([...todos, { id: nanoid(), title: input }]);
+    if (input.trim().length > 0) {
+      settodos([...todos, { id: nanoid(), title: input }]);
     }
     setinput("");
   };
@@ -44,9 +43,13 @@ const Main = () => {
         <ul>
           {todos.map((ele) => {
             return (
-              <li key={ele.id}>
-                {ele.title}{" "}
-                <button onClick={() => handleDelete(ele.id)}>Delete</button>
+              <li key={ele.id} className="list">
+                {ele.title}
+                <div>
+
+                <button onClick={() => handleDelete(ele.id)} className="button">Delete</button>
+                <button onClick={() => handleDelete(ele.id)} className="button">Edit</button>
+                </div>
               </li>
             );
           })}
