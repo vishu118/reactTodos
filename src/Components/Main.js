@@ -12,7 +12,10 @@ const Main = () => {
   };
 
   const handleAddTodos = () => {
-    settodos([...todos, { id: nanoid(), title: input }]);
+    if(input.trim().length>0){
+
+        settodos([...todos, { id: nanoid(), title: input }]);
+    }
     setinput("");
   };
 
@@ -22,9 +25,9 @@ const Main = () => {
   };
 
   return (
-    <>
+    <div className="container">
       <h1>To-Do App</h1>
-      <div>
+      <div className="inputfield">
         <input
           type="text"
           placeholder="Enter Your Task...."
@@ -32,7 +35,7 @@ const Main = () => {
           value={input}
           onChange={handleChange}
         />
-        <button type="submit" onClick={handleAddTodos}>
+        <button type="submit" onClick={handleAddTodos} className="btn">
           Add
         </button>
       </div>
@@ -49,7 +52,7 @@ const Main = () => {
           })}
         </ul>
       </div>
-    </>
+    </div>
   );
 };
 
