@@ -64,7 +64,7 @@ body {
 }
 
 
-input::placeholder {
+.inputfield input::placeholder {
   color: #ffffff4d;
 }
 
@@ -101,8 +101,30 @@ input::placeholder {
   cursor: pointer;
 }
 
+.Search{
+  color: #7e7c7c;
+  padding: 6px  ;
+  width: 80%;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  background-color: #fff;
+  border-radius: 8px;
+  margin-left: 30px;
+ 
+  
+  
 
+}
 
+.Search input{
+  border: none;
+  margin-left: 20px ;
+}
+
+.Search input:focus{
+  outline: none;
+}
 
 
 
