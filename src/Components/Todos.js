@@ -1,6 +1,6 @@
 import React from 'react'
 
-export default function Todos({todos,handleDelete}) {
+export default function Todos({todos,handleDelete,handleEdit}) {
     
   return (
     <div className="toDo-body">
@@ -12,7 +12,7 @@ export default function Todos({todos,handleDelete}) {
             <div>
 
             <button onClick={() => handleDelete(ele.id)} className="button">Delete</button>
-            <button  className="button">Edit</button>
+            <button  className="button" onClick = {()=>handleEdit(ele.id)}>Edit</button>
             </div>
           </li>
         );

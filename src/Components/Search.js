@@ -1,17 +1,20 @@
-import { useState } from "react";
+// import { useState } from "react";
 
-const Search = ({ todos, settodos }) => {
-  const [searchTodo, setsearchTodo] = useState("");
+const Search = ({ todos, settodos,searchTodo, setsearchTodo }) => {
+  // const [searchTodo, setsearchTodo] = useState("");
 
 
 
 // Function to handle searching of todos form existing todos.....................................
 
   const handleSearch = (e) => {
+    setsearchTodo(e.target.value)
     const matchedTodo = todos.filter((ele) => {
-        setsearchTodo(e.target.value);
       return ele.title.toLowerCase().includes(e.target.value.toLowerCase());
     });
+
+    // setsearchTodo(e.target.value)
+    console.log(matchedTodo)
     settodos(matchedTodo);
     
   };
