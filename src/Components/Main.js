@@ -1,18 +1,36 @@
 import React from "react";
-import { useState } from "react";
+import { useState,useEffect } from "react";
 import { nanoid } from "nanoid";
 import Search from "./Search";
 import Todos from "./Todos";
 import Inputfields from "./Inputfields";
 
 const Main = () => {
-  const [todos, settodos] = useState([]);
-  const [searchedTodo,setSearchedTodo] = useState([]);
-  const [input, setinput] = useState("");
-  const [editItem ,seteditItem ] = useState(null)
-  const [searchTodo, setsearchTodo] = useState("");
+
+  
+
+const [todos, settodos] = useState(getData());
+const [searchedTodo,setSearchedTodo] = useState([]);
+const [input, setinput] = useState("");
+const [editItem ,seteditItem ] = useState(null)
+const [searchTodo, setsearchTodo] = useState("");
 
 
+// To get data from local storage.
+
+function getData(){
+  let list = localStorage.getItem('Lists')
+   if(list){
+    return JSON.parse(localStorage.getItem('Lists'))
+   }else{
+    return [];
+   }
+}
+
+// Add Data To local storage ============================
+useEffect(()=>{
+  localStorage.setItem('Lists' , JSON.stringify(todos) )
+},[todos])
 
 // function to handle every change in inputfields..................
   const handleChange = (e) => {
